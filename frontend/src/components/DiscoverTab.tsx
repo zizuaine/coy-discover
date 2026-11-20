@@ -11,8 +11,8 @@ export const DiscoverTabs = ({ activeTab, onSwitch }: DiscoverTabsProps) => {
                     type="button"
                     onClick={() => onSwitch("discover")}
                     className={`cursor-pointer rounded-full py-2 text-xs font-bold transition-colors ${activeTab === "discover"
-                            ? "border-2 border-black bg-[#FF2E7E] text-neutral-900"
-                            : "border-2 border-transparent text-neutral-500 hover:text-black"
+                        ? "border-2 border-black bg-[#FF2E7E] text-neutral-900"
+                        : "border-2 border-transparent text-neutral-500 hover:text-black"
                         }`}
                 >
                     Discover
@@ -22,8 +22,8 @@ export const DiscoverTabs = ({ activeTab, onSwitch }: DiscoverTabsProps) => {
                     type="button"
                     onClick={() => onSwitch("matches")}
                     className={`cursor-pointer rounded-full py-2 text-xs font-bold transition-colors ${activeTab === "matches"
-                            ? "border-2 border-black bg-[#FF2E7E] text-neutral-900"
-                            : "border-2 border-transparent text-neutral-500 hover:text-black"
+                        ? "border-2 border-black bg-[#FF2E7E] text-neutral-900"
+                        : "border-2 border-transparent text-neutral-500 hover:text-black"
                         }`}
                 >
                     Matches

@@ -34,11 +34,6 @@
   padding-inline: clamp(24px, 8vw, 40px);
 }
 
-.swipe-card-stage > div {
-  width: 100%;
-  max-width: 360px;
-}
-
 .discover-status {
   margin: 0;
   color: #625e68;
@@ -101,7 +96,6 @@
   position: absolute;
   top: 0;
   width: min(264px, calc(100% - 32px));
-  border-top: 1px solid #77727c;
   content: "";
 }
 

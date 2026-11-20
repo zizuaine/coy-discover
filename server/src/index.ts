@@ -18,7 +18,7 @@ app.use('/swipe', rateLimit({
 }));
 
 const db = createDatabase('discover.sqlite');
-seedDatabase(db, true);
+seedDatabase(db, false);
 const repo = createDiscoverRepo(db);
 const controller = createDiscoverController(repo);
 app.use(createDiscoverRoutes(controller));
