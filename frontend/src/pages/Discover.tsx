@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Profile } from "../components/ProfileCard";
 import { api } from "../api";
-import { ProfileCard } from "../components/ProfileCard";
 import { MatchModal } from "../components/MatchModal";
 import { DiscoverTabs } from "../components/DiscoverTab";
 import { SwipeCard } from "../components/SwipeCard"
@@ -67,19 +66,15 @@ export const Discover = ({ navigateToMatches }: DiscoverProps) => {
                     {isEmpty && <p className="discover-status">You've seen everyone! Check back later.</p>}
 
                     {currentProfile && (
-                        <div className="swipe-card-stage">
-                            <ProfileCard profile={currentProfile} />
-                        </div>
-                    )}
-
-                    {currentProfile && (
                         <>
-                            <SwipeCard
-                                key={currentProfile.id}
-                                profile={currentProfile}
-                                onSwipe={onSwipe}
-                                disabled={isSwiping}
-                            />
+                            <div className="swipe-card-stage">
+                                <SwipeCard
+                                    key={currentProfile.id}
+                                    profile={currentProfile}
+                                    onSwipe={onSwipe}
+                                    disabled={isSwiping}
+                                />
+                            </div>
 
                             <div className="mt-6 hidden items-center justify-center gap-6 md:flex">
                                 <button
