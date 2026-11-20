@@ -1,0 +1,157 @@
+.discover-page {
+  min-height: 100svh;
+  overflow-x: clip;
+  background: #fff;
+  padding-bottom: calc(64px + env(safe-area-inset-bottom));
+}
+
+.discover-canvas {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 448px;
+  min-height: 100svh;
+  margin-inline: auto;
+  padding: 24px 16px;
+  background: #fff;
+}
+
+.discover-content {
+  display: flex;
+  min-height: calc(100svh - 110px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-block: 12px;
+}
+
+.swipe-card-stage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  overflow: visible;
+  padding-inline: clamp(24px, 8vw, 40px);
+}
+
+.discover-status {
+  margin: 0;
+  color: #625e68;
+  text-align: center;
+}
+
+.swipe-actions {
+  width: 100%;
+  max-width: 360px;
+}
+
+.swipe-button {
+  min-height: 48px;
+  flex: 1;
+  border: 2px solid #24212b;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.swipe-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.swipe-button:focus-visible {
+  outline: 3px solid #24212b;
+  outline-offset: 3px;
+}
+
+.swipe-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.swipe-button--pass {
+  background: #fff;
+  color: #24212b;
+}
+
+.swipe-button--like {
+  background: #ff2e7e;
+  color: #fff;
+}
+
+.tab-bar {
+  position: fixed;
+  z-index: 50;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 8px 16px calc(6px + env(safe-area-inset-bottom));
+  background: #fff;
+}
+
+.tab-bar::before {
+  position: absolute;
+  top: 0;
+  width: min(264px, calc(100% - 32px));
+  border-top: 1px solid #77727c;
+  content: "";
+}
+
+.tab-bar-items {
+  display: flex;
+  width: min(264px, 100%);
+  align-items: center;
+}
+
+.tab-button {
+  display: flex;
+  min-height: 36px;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 1px 4px;
+  border: 0;
+  background: transparent;
+  color: #756f80;
+  font: inherit;
+  font-size: 9px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab-button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.tab-button:last-child svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.tab-button.is-active {
+  color: #e83c70;
+  font-weight: 700;
+}
+
+.tab-button:focus-visible {
+  border-radius: 6px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (min-height: 700px) {
+  .discover-content {
+    min-height: calc(100vh - 110px);
+  }
+}
